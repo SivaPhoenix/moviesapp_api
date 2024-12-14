@@ -4,7 +4,10 @@ const movieIndex=(req,res)=>{
 }
 
 const movieCreate=(req,res)=>{
-    res.send("Create a new movie");
+    // res.send("Create a new movie");
+    console.log(req.body);
+
+    return res.json(req.body);
 }
 
 const movieEdit=(req,res)=>{
