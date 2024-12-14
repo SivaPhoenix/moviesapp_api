@@ -1,5 +1,5 @@
 const express= require('express')
-const { movieCreate, movieDelete, movieEdit, movieIndex } =require ("../controllers/movie.controller.js")
+const { movieCreate, movieDelete, movieEdit, movieIndex, movieDetails } =require ("../controllers/movie.controller.js")
 
 const router=express.Router()
 
@@ -7,6 +7,7 @@ const router=express.Router()
 
 router.get('/',movieIndex)
 router.post('/',movieCreate)
+router.get('/:id',movieDetails)  // Added parameter to get specific movie by id
 router.put('/:id',movieEdit)
 router.delete('/:id',movieDelete)
 
